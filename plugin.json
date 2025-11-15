@@ -27,7 +27,7 @@
     }
   ],
   "emoji": "🖼️",
-  "title": "Stable Diffusion v2 Image",
+  "title": "Stable Diffusion XL Image",
   "openaiSpec": {
     "name": "image_generation_via_stable_diffusion",
     "parameters": {
