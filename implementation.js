@@ -21,8 +21,8 @@ async function image_generation_via_stable_diffusion(params, userSettings) {
     const imageData = await generateImageFromStabilityAPI(
       stabilityAPIKey,
       prompt,
-      Number(width) || 512,
-      Number(height) || 512
+      Number(width) || 1024,
+      Number(height) || 1024
     );
 
     return imageData;
@@ -41,7 +41,7 @@ function validateAPIKey(apiKey) {
 }
 async function generateImageFromStabilityAPI(apiKey, prompt, width, height) {
   const apiUrl =
-    'https://api.stability.ai/v1/generation/stable-diffusion-v1-6/text-to-image';
+    'https://api.stability.ai/v1/generation/stable-diffusion-xl-1024-v1-0/text-to-image';
 
   const response = await fetch(apiUrl, {
     method: 'POST',
